@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Hot Potato",
+    "bold": true
+  },
+  "external_title": "Hot Potato",
+  "body": [
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:baked_potato"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Configure & start the Hot Potato minigame"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "minecraft:number_range",
+      "key": "dialog_explosion_time",
+      "label": "Time until explosion (s)",
+      "start": 1,
+      "end": 7200,
+      "initial": 900
+    },
+    {
+      "type": "minecraft:number_range",
+      "key": "dialog_cooldown",
+      "label": "Give to person cooldown (s)",
+      "start": 1,
+      "end": 60,
+      "initial": 5
+    }
+  ],
+  "actions": [
+    {
+      "label": "Start game",
+      "action": {
+        "type": "minecraft:dynamic/run_command",
+        "template": "function hotpotato:app/game/start {dialog_explosion_time:$(dialog_explosion_time),dialog_cooldown:$(dialog_cooldown)}"
+      }
+    }
+  ]
+}
