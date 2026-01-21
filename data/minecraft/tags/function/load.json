@@ -1,6 +1,6 @@
 {
   "values": [
-    "craftsponge:app/setup",
-    "craftsponge:app/load_message"
+    "hotpotato:app/setup",
+    "hotpotato:app/load_message"
   ]
 }

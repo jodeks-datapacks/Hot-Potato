@@ -6,11 +6,11 @@
 		"supported_formats": [80,999],
     "description": [
       {
-        "text": "\"Craft Sponge\" (craftsponge)"
+        "text": "\"Hot Potato\" (hotpotato)"
       },
       "\n",
       {
-        "text": "Makes Sponge craftable",
+        "text": "Hot Potato datapack",
         "color": "#aaaaaa"
       },
       "\n\n",
