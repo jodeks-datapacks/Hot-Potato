@@ -1,0 +1,59 @@
+{
+  "criteria": {
+    "used_goat_horn": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:all_of",
+            "terms": [
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Tags:[\"hotpotato.in_game\"]}"
+                }
+              },
+              {
+                "condition": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "nbt": "{Tags:[\"hotpotato.has_potato\"]}"
+                }
+              },
+              {
+                "condition": "minecraft:value_check",
+                "value": {
+                  "type": "minecraft:score",
+                  "target": {
+                    "type": "minecraft:fixed",
+                    "name": "&potato_check"
+                  },
+                  "score": "hotpotato.root"
+                },
+                "range": 0
+              },
+              {
+                "condition": "minecraft:inverted",
+                "term": {
+                  "condition": "minecraft:entity_properties",
+                  "entity": "this",
+                  "predicate": {
+                    "slots": {
+                      "armor.head": {
+                        "items": "minecraft:potato"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "hotpotato:app/game/end/no_potato_on_head"
+  }
+}

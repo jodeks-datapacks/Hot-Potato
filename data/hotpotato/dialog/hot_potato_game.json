@@ -42,6 +42,13 @@
         "type": "minecraft:dynamic/run_command",
         "template": "function hotpotato:app/game/start {dialog_explosion_time:$(dialog_explosion_time),dialog_cooldown:$(dialog_cooldown)}"
       }
+    },
+    {
+      "label": "Cancel game",
+      "action": {
+        "type": "minecraft:run_command",
+        "command": "function hotpotato:app/game/end/force"
+      }
     }
   ]
 }

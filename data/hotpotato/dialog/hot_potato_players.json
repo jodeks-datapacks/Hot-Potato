@@ -1,0 +1,44 @@
+{
+  "type": "minecraft:multi_action",
+  "title": {
+    "text": "Hot Potato - Add or remove a player",
+    "bold": true
+  },
+  "external_title": "Hot Potato - Add or remove a player",
+  "body": [
+    {
+      "type": "minecraft:item",
+      "item": {
+        "id": "minecraft:baked_potato"
+      }
+    },
+    {
+      "type": "minecraft:plain_message",
+      "contents": "Add or remove a player from the Hot Potato game"
+    }
+  ],
+  "inputs": [
+    {
+      "type": "minecraft:text",
+      "key": "dialog_player_name",
+      "label": "Player Name",
+      "initial": ""
+    }
+  ],
+  "actions": [
+    {
+      "label": "Add player to game",
+      "action": {
+        "type": "minecraft:dynamic/run_command",
+        "template": "function hotpotato:app/game/player/add_to_game {dialog_player_name:$(dialog_player_name)}"
+      }
+    },
+    {
+      "label": "Remove player from game",
+      "action": {
+        "type": "minecraft:dynamic/run_command",
+        "template": "function hotpotato:app/game/player/remove_from_game {dialog_player_name:$(dialog_player_name)}"
+      }
+    }
+  ]
+}

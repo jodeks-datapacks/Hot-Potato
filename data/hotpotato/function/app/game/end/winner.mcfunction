@@ -1,9 +1,13 @@
+scoreboard players set &potato_check hotpotato.root 1
+
 schedule clear hotpotato:app/game/bossbar/schedule
 schedule clear hotpotato:app/game/cooldown
 bossbar remove hotpotato:explosion_time
 
-title @a times 0 100 0
-title @a title [{"text":"Player "},{"selector":"@s"},{"text":" is the winner!"}]
+execute as @a[tag=hotpotato.has_potato] run item replace entity @s armor.head with minecraft:air
+
+title @a times 10 80 10
+title @a actionbar [{"text":"Player "},{"selector":"@s"},{"text":" is the winner!"}]
 
 # Summon rockets
 

@@ -4,10 +4,12 @@
       "trigger": "minecraft:entity_hurt_player",
       "conditions": {
         "damage": {
-          "source_entity": {
-            "slots": {
-              "armor.head": {
-                "items": "minecraft:potato"
+          "type": {
+            "source_entity": {
+              "slots": {
+                "armor.head": {
+                  "items": "minecraft:potato"
+                }
               }
             }
           }

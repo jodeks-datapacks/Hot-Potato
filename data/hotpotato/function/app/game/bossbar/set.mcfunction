@@ -1,1 +1,1 @@
-$bossbar set hotpotato:explosion_time value $(explosion_time)
+$bossbar set hotpotato:explosion_time value $(explosion_time_counter)

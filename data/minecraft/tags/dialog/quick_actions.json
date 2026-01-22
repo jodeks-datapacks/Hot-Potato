@@ -1,3 +1,6 @@
 {
-  "values": ["hotpotato:start_hot_potato_game"]
+  "values": [
+    "hotpotato:hot_potato_game",
+    "hotpotato:hot_potato_players"
+  ]
 }

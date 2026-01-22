@@ -8,7 +8,7 @@
             "condition": "minecraft:entity_properties",
             "entity": "this",
             "predicate": {
-              "nbt": "{Tags:hotpotato.has_potato}"
+              "nbt": "{Tags:[\"hotpotato.has_potato\"]}"
             }
           },
           {
@@ -19,7 +19,7 @@
                 "type": "minecraft:fixed",
                 "name": "&explosion_time_counter"
               },
-              "score": "hotpotato.config"
+              "score": "hotpotato.root"
             },
             "range": {
               "min": {
@@ -28,7 +28,7 @@
                   "type": "minecraft:fixed",
                   "name": "&explosion_time"
                 },
-                "score": "hotpotato.config"
+                "score": "hotpotato.root"
               },
               "max": {
                 "type": "minecraft:score",
@@ -36,7 +36,7 @@
                   "type": "minecraft:fixed",
                   "name": "&explosion_time"
                 },
-                "score": "hotpotato.config"
+                "score": "hotpotato.root"
               }
             }
           }
