@@ -1,0 +1,50 @@
+{
+  "criteria": {
+    "used_goat_horn": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": [
+          {
+            "condition": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "nbt": "{Tags:hotpotato.has_potato}"
+            }
+          },
+          {
+            "condition": "minecraft:value_check",
+            "value": {
+              "type": "minecraft:score",
+              "target": {
+                "type": "minecraft:fixed",
+                "name": "&explosion_time_counter"
+              },
+              "score": "hotpotato.config"
+            },
+            "range": {
+              "min": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "&explosion_time"
+                },
+                "score": "hotpotato.config"
+              },
+              "max": {
+                "type": "minecraft:score",
+                "target": {
+                  "type": "minecraft:fixed",
+                  "name": "&explosion_time"
+                },
+                "score": "hotpotato.config"
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "function": "hotpotato:app/game/explode"
+  }
+}

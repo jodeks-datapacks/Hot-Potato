@@ -1,0 +1,1 @@
+$bossbar set hotpotato:explosion_time value $(explosion_time)

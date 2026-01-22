@@ -1,0 +1,21 @@
+{
+  "criteria": {
+    "used_goat_horn": {
+      "trigger": "minecraft:entity_hurt_player",
+      "conditions": {
+        "damage": {
+          "source_entity": {
+            "slots": {
+              "armor.head": {
+                "items": "minecraft:potato"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "hotpotato:app/game/hit/by_potato"
+  }
+}
