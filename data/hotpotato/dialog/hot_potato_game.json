@@ -18,21 +18,17 @@
     }
   ],
   "inputs": [
-    {
-      "type": "minecraft:number_range",
+  {
+      "type": "minecraft:text",
       "key": "dialog_explosion_time",
       "label": "Time until explosion (s)",
-      "start": 1,
-      "end": 7200,
-      "initial": 900
+      "initial": "900"
     },
     {
-      "type": "minecraft:number_range",
+      "type": "minecraft:text",
       "key": "dialog_cooldown",
       "label": "Give to person cooldown (s)",
-      "start": 1,
-      "end": 60,
-      "initial": 5
+      "initial": "5"
     }
   ],
   "actions": [

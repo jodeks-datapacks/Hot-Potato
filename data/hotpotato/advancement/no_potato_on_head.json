@@ -41,7 +41,12 @@
                   "predicate": {
                     "slots": {
                       "armor.head": {
-                        "items": "minecraft:potato"
+                        "items": "minecraft:potato",
+                        "components": {
+                          "minecraft:custom_data": {
+                            "hotpotato": true
+                          }
+                        }
                       }
                     }
                   }

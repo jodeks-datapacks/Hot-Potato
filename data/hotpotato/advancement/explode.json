@@ -21,24 +21,7 @@
               },
               "score": "hotpotato.root"
             },
-            "range": {
-              "min": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "&explosion_time"
-                },
-                "score": "hotpotato.root"
-              },
-              "max": {
-                "type": "minecraft:score",
-                "target": {
-                  "type": "minecraft:fixed",
-                  "name": "&explosion_time"
-                },
-                "score": "hotpotato.root"
-              }
-            }
+            "range": 0
           }
         ]
       }

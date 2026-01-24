@@ -1,0 +1,23 @@
+{
+  "function": "minecraft:set_count",
+  "count": -1,
+  "add":true,
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "slots": {
+          "inventory.20": {
+            "items": "minecraft:potato",
+            "components": {
+              "minecraft:custom_data": {
+                "hotpotato": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
