@@ -2,7 +2,7 @@ title @a times 10 320 10
 execute if data entity @s equipment.head run return run function hotpotato:app/game/end/item_on_head
 
 tag @s add hotpotato.has_potato
-item replace entity @s armor.head with minecraft:potato[custom_data={hotpotato:true}]
+item replace entity @s armor.head with minecraft:baked_potato[custom_data={hotpotato:true},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={hidden_components:["enchantments"]}]
 
 execute at @s run playsound minecraft:item.totem.use voice @a ~ ~ ~ 1 1 1
 

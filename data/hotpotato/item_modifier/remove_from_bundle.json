@@ -1,8 +1,0 @@
-{
-  "function": "minecraft:modify_contents",
-  "component": "minecraft:bundle_contents",
-  "modifier": {
-    "function": "minecraft:set_count",
-    "count": -1
-  }
-}
