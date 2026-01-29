@@ -29,6 +29,44 @@
       "key": "dialog_cooldown",
       "label": "Give to person cooldown (s)",
       "initial": "5"
+    },
+    {
+      "type": "minecraft:text",
+      "key": "dialog_cooldown_before_start",
+      "label": "Cooldown before game starts (s)",
+      "initial": "10"
+    },
+    {
+      "type": "minecraft:single_option",
+      "key": "dialog_player_display",
+      "label": {
+        "translate": "hotpotato.dialog.player_display",
+        "fallback": "Player Display Option"
+      },
+      "options": [
+        {
+          "id": "0",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.none",
+            "fallback": "None"
+          },
+          "initial": true
+        },
+        {
+          "id": "1",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.glowing",
+            "fallback": "Glowing Effect"
+          }
+        },
+        {
+          "id": "2",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.team",
+            "fallback": "Team Color"
+          }
+        }
+      ]
     }
   ],
   "actions": [
@@ -36,7 +74,7 @@
       "label": "Start game",
       "action": {
         "type": "minecraft:dynamic/run_command",
-        "template": "function hotpotato:app/game/start {dialog_explosion_time:$(dialog_explosion_time),dialog_cooldown:$(dialog_cooldown)}"
+        "template": "function hotpotato:app/game/start {dialog_explosion_time:$(dialog_explosion_time), dialog_cooldown_before_start:$(dialog_cooldown_before_start), dialog_player_display:$(dialog_player_display), dialog_cooldown:$(dialog_cooldown)}"
       }
     },
     {

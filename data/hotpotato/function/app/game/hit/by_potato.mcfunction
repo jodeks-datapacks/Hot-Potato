@@ -8,14 +8,10 @@ execute unless score &cooldown_counter hotpotato.root = &cooldown hotpotato.root
 
 schedule function hotpotato:app/game/cooldown 1t
 
-scoreboard players set &potato_check hotpotato.root 1
-
 execute on attacker run tag @s remove hotpotato.has_potato
 execute on attacker run item replace entity @s armor.head with air
 
 tag @s add hotpotato.has_potato
 item replace entity @s armor.head with minecraft:baked_potato[custom_data={hotpotato:true},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={hidden_components:["enchantments"]}]
-
-scoreboard players set &potato_check hotpotato.root 0
 
 execute at @s run playsound minecraft:item.firecharge.use voice @a ~ ~ ~ 5 1 1

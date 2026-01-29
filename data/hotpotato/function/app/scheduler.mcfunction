@@ -1,3 +1,8 @@
 schedule function hotpotato:app/scheduler 1s
 
-execute if entity @a[tag=hotpotato.has_potato] run function hotpotato:app/game/bossbar/schedule
+execute if score &cooldown_before_start_counter hotpotato.root matches 0.. run scoreboard players remove &cooldown_before_start_counter hotpotato.root 1
+execute if score &cooldown_before_start_counter hotpotato.root matches 0 run function hotpotato:app/game/start
+title @a actionbar [{"text":"Game starts in "},{"score":{"name":"&cooldown_before_start_counter","objective":"hotpotato.root"}},{"text":"s"}]
+
+execute if score &game_running hotpotato.root matches 1 run function hotpotato:app/game/bossbar/schedule
+execute if score &game_running hotpotato.root matches 1 unless entity @a[tag=hotpotato.has_potato] run function hotpotato:app/game/end/force

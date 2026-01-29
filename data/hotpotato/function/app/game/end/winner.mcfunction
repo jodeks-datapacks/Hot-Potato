@@ -1,9 +1,6 @@
-scoreboard players set &potato_check hotpotato.root 1
+scoreboard players set &game_running hotpotato.root 0
 
-schedule clear hotpotato:app/game/cooldown
-bossbar remove hotpotato:explosion_time
-
-execute as @a[tag=hotpotato.has_potato] run item replace entity @s armor.head with minecraft:air
+function hotpotato:app/game/clear
 
 title @a times 10 320 10
 title @a actionbar [{"text":"Player "},{"selector":"@s"},{"text":" is the winner!"}]
@@ -23,7 +20,3 @@ execute at @s run summon firework_rocket ~ ~3 ~ {LifeTime:40,FireworksItem:{id:"
 
 execute at @s run summon firework_rocket ~1.5 ~3 ~1.5 {LifeTime:45,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"creeper",has_twinkle:true,has_trail:true,colors:[I;65280],fade_colors:[I;16777045]}]}}}}
 execute at @s run summon firework_rocket ~-1.5 ~3 ~-1.5 {LifeTime:50,FireworksItem:{id:"minecraft:firework_rocket",count:1,components:{"minecraft:fireworks":{explosions:[{shape:"creeper",has_twinkle:true,has_trail:true,colors:[I;65280],fade_colors:[I;16777045]}]}}}}
-
-tag @a remove hotpotato.in_game
-tag @a remove hotpotato.has_potato
-tag @a remove hotpotato.exploded

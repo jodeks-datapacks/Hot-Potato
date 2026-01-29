@@ -1,14 +1,6 @@
-scoreboard players set &potato_check hotpotato.root 1
+scoreboard players set &game_running hotpotato.root 0
 
-bossbar remove hotpotato:explosion_time
-
-schedule clear hotpotato:app/game/cooldown
-
-execute as @a[tag=hotpotato.has_potato] run item replace entity @s armor.head with minecraft:air
+function hotpotato:app/game/clear
 
 title @a times 10 320 10
 title @a actionbar [{"text":"Game canceled! No winner."}]
-
-tag @a remove hotpotato.in_game
-tag @a remove hotpotato.has_potato
-tag @a remove hotpotato.exploded
