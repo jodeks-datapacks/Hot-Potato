@@ -37,6 +37,18 @@
       "initial": "10"
     },
     {
+      "type": "minecraft:text",
+      "key": "dialog_speed_before_explosion",
+      "label": "Speed before explosion (s)",
+      "initial": "20"
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "dialog_player_particles",
+      "label": "Selected player has particles",
+      "initial": false
+    },
+    {
       "type": "minecraft:single_option",
       "key": "dialog_player_display",
       "label": {
@@ -49,15 +61,15 @@
           "display": {
             "translate": "hotpotato.dialog.player_display.none",
             "fallback": "None"
-          },
-          "initial": true
+          }
         },
         {
           "id": "1",
           "display": {
             "translate": "hotpotato.dialog.player_display.glowing",
             "fallback": "Glowing Effect"
-          }
+          },
+          "initial": true
         },
         {
           "id": "2",
@@ -67,6 +79,12 @@
           }
         }
       ]
+    },   
+    {
+      "type": "minecraft:text",
+      "key": "dialog_player_display_color",
+      "label": "Player Display Color",
+      "initial": "FFAA00"
     }
   ],
   "actions": [
@@ -74,7 +92,7 @@
       "label": "Start game",
       "action": {
         "type": "minecraft:dynamic/run_command",
-        "template": "function hotpotato:app/game/start {dialog_explosion_time:$(dialog_explosion_time), dialog_cooldown_before_start:$(dialog_cooldown_before_start), dialog_player_display:$(dialog_player_display), dialog_cooldown:$(dialog_cooldown)}"
+        "template": "function hotpotato:app/game/init {dialog_explosion_time:$(dialog_explosion_time), dialog_cooldown_before_start:$(dialog_cooldown_before_start), dialog_player_display:$(dialog_player_display), dialog_cooldown:$(dialog_cooldown), dialog_speed_before_explosion:$(dialog_speed_before_explosion), dialog_player_particles:$(dialog_player_particles), dialog_player_display_color:$(dialog_player_display_color)}"
       }
     },
     {

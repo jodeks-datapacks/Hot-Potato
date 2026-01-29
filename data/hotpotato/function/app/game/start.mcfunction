@@ -2,10 +2,10 @@ scoreboard players set &game_running hotpotato.root 1
 
 # Bossbar with timer
 bossbar add hotpotato:explosion_time "Hot Potato Explosion Timer"
+$bossbar set hotpotato:explosion_time max $(explosion_time)
 bossbar set hotpotato:explosion_time name [{"text":"Hot Potato Explosion Timer"}]
 bossbar set hotpotato:explosion_time players @a
 bossbar set hotpotato:explosion_time color yellow
-$bossbar set hotpotato:explosion_time max $(dialog_explosion_time)
 
 execute as @r run function hotpotato:app/game/random_player_init
 

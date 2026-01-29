@@ -15,3 +15,5 @@ tag @s add hotpotato.has_potato
 item replace entity @s armor.head with minecraft:baked_potato[custom_data={hotpotato:true},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={hidden_components:["enchantments"]}]
 
 execute at @s run playsound minecraft:item.firecharge.use voice @a ~ ~ ~ 5 1 1
+
+effect clear @a[nbt={active_effects:[{id:"minecraft:speed",duration:-1}]}] speed
