@@ -6,16 +6,7 @@
         "damage": {
           "type": {
             "source_entity": {
-              "slots": {
-                "armor.head": {
-                  "items": "minecraft:baked_potato",
-                  "components": {
-                    "minecraft:custom_data": {
-                      "hotpotato": true
-                    }
-                  }
-                }
-              }
+              "nbt": "{Tags:[\"hotpotato.has_potato\"]}"
             }
           }
         }

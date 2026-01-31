@@ -2,9 +2,9 @@ $execute as $(dialog_player_name) if entity @s[tag=hotpotato.has_potato] run fun
 
 $tag $(dialog_player_name) remove hotpotato.in_game
 $tag $(dialog_player_name) remove hotpotato.has_potato
-$tag $(dialog_player_name) remove hotpotato.exploded
 
-$effect clear $(dialog_player_name) minecraft:glowing
-$team leave hotpotato.players $(dialog_player_name)
+$team leave $(dialog_player_name)
+
+scoreboard players remove &players_in_game hotpotato.root 1
 
 dialog show @s hotpotato:hot_potato_players

@@ -53,7 +53,7 @@
       "key": "dialog_player_display",
       "label": {
         "translate": "hotpotato.dialog.player_display",
-        "fallback": "Player Display Option"
+        "fallback": "Player Display"
       },
       "options": [
         {
@@ -67,7 +67,7 @@
           "id": "1",
           "display": {
             "translate": "hotpotato.dialog.player_display.glowing",
-            "fallback": "Glowing Effect"
+            "fallback": "Glowing Effect (player who got the potato) + Team Color (players in the game)"
           },
           "initial": true
         },
@@ -75,16 +75,132 @@
           "id": "2",
           "display": {
             "translate": "hotpotato.dialog.player_display.team",
-            "fallback": "Team Color"
+            "fallback": "Team Color (players in the game)"
           }
         }
       ]
-    },   
+    },
     {
-      "type": "minecraft:text",
+      "type": "minecraft:single_option",
       "key": "dialog_player_display_color",
-      "label": "Player Display Color",
-      "initial": "FFAA00"
+      "label": {
+        "translate": "hotpotato.dialog.player_display_color",
+        "fallback": "Player Display Color"
+      },
+      "options": [
+        {
+          "id": "0",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.black",
+            "fallback": "Black"
+          }
+        },
+        {
+          "id": "1",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.dark_blue",
+            "fallback": "Dark Blue"
+          }
+        },
+        {
+          "id": "2",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.dark_green",
+            "fallback": "Dark Green"
+          }
+        },
+        {
+          "id": "3",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.dark_aqua",
+            "fallback": "Dark Aqua"
+          }
+        },
+        {
+          "id": "4",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.dark_red",
+            "fallback": "Dark Red"
+          }
+        },
+        {
+          "id": "5",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.dark_purple",
+            "fallback": "Dark Purple"
+          }
+        },
+        {
+          "id": "6",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.gold",
+            "fallback": "Gold"
+          }
+        },
+        {
+          "id": "7",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.gray",
+            "fallback": "Gray"
+          }
+        },
+        {
+          "id": "8",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.dark_gray",
+            "fallback": "Dark Gray"
+          }
+        },
+        {
+          "id": "9",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.blue",
+            "fallback": "Blue"
+          }
+        },
+        {
+          "id": "10",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.green",
+            "fallback": "Green"
+          }
+        },
+        {
+          "id": "11",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.aqua",
+            "fallback": "Aqua"
+          }
+        },
+        {
+          "id": "12",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.red",
+            "fallback": "Red"
+          }
+        },
+        {
+          "id": "13",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.light_purple",
+            "fallback": "Light Purple"
+          }
+        },
+        {
+          "id": "14",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.yellow",
+            "fallback": "Yellow"
+          }
+        },
+        {
+          "id": "15",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.white",
+            "fallback": "White"
+          }
+        }
+      ]
     }
   ],
   "actions": [

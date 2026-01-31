@@ -1,9 +1,7 @@
 advancement revoke @s only hotpotato:hit_by_potato
 
-title @a times 10 320 10
-execute if data entity @s equipment.head run return run title @a actionbar [{"text":"Player "},{"selector":"@s"},{"text":" has something equipped to their head! Can't transfer potato"}]
-execute if entity @s[tag=hotpotato.exploded] run return run title @a actionbar [{"text":"Player "},{"selector":"@s"},{"text":" is already exploded! Can't transfer potato"}]
-execute unless entity @s[tag=hotpotato.in_game] run return run title @a actionbar [{"text":"Player "},{"selector":"@s"},{"text":" is not in the game! Can't transfer potato"}]
+execute if data entity @s equipment.head run return run title @a[tag=hotpotato.has_potato] actionbar [{"text":"Player "},{"selector":"@s"},{"text":" has something equipped to their head! Can't transfer potato"}]
+execute unless entity @s[tag=hotpotato.in_game] run return run title @a[tag=hotpotato.has_potato] actionbar [{"text":"Player "},{"selector":"@s"},{"text":" is not in the game! Can't transfer potato"}]
 execute unless score &cooldown_counter hotpotato.root = &cooldown hotpotato.root run return fail
 
 schedule function hotpotato:app/game/cooldown 1t
