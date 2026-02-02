@@ -1,6 +1,6 @@
 advancement revoke @s only hotpotato:explode
 
-damage @s 10000 minecraft:outside_border
+damage @s 10000 minecraft:unattributed_fireball
 
 execute store result score &explosion_time_counter hotpotato.root run scoreboard players get &explosion_time hotpotato.root
 execute store result storage hotpotato:root explosion_time_counter int 1 run scoreboard players get &explosion_time hotpotato.root

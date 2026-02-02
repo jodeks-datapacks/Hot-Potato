@@ -18,7 +18,7 @@
     }
   ],
   "inputs": [
-  {
+    {
       "type": "minecraft:text",
       "key": "dialog_explosion_time",
       "label": "Time until explosion (s)",
@@ -40,17 +40,30 @@
       "type": "minecraft:text",
       "key": "dialog_speed_before_explosion",
       "label": "Speed before explosion (s)",
-      "initial": "20"
+      "initial": "120"
     },
     {
       "type": "minecraft:boolean",
       "key": "dialog_player_particles",
       "label": "Selected player has particles",
-      "initial": false
+      "initial": true
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "dialog_saturation",
+      "label": "Selected player has infinite saturation",
+      "initial": true
+    },
+    {
+      "type": "minecraft:boolean",
+      "key": "dialog_no_immediate_retagging",
+      "label": "Potato player can't be immediately tagged again",
+      "initial": true
     },
     {
       "type": "minecraft:single_option",
       "key": "dialog_player_display",
+      "width": 250,
       "label": {
         "translate": "hotpotato.dialog.player_display",
         "fallback": "Player Display"
@@ -66,16 +79,23 @@
         {
           "id": "1",
           "display": {
-            "translate": "hotpotato.dialog.player_display.glowing",
-            "fallback": "Glowing Effect (player who got the potato) + Team Color (players in the game)"
-          },
-          "initial": true
+            "translate": "hotpotato.dialog.player_display.team",
+            "fallback": "Only Team Color"
+          }
         },
         {
           "id": "2",
           "display": {
-            "translate": "hotpotato.dialog.player_display.team",
-            "fallback": "Team Color (players in the game)"
+            "translate": "hotpotato.dialog.player_display.glowing",
+            "fallback": "Glowing Effect for players"
+          },
+          "initial": true
+        },
+        {
+          "id": "3",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.glowing",
+            "fallback": "Glowing Effect for the potato guy"
           }
         }
       ]
@@ -83,6 +103,7 @@
     {
       "type": "minecraft:single_option",
       "key": "dialog_player_display_color",
+      "width": 250,
       "label": {
         "translate": "hotpotato.dialog.player_display_color",
         "fallback": "Player Display Color"
@@ -208,7 +229,7 @@
       "label": "Start game",
       "action": {
         "type": "minecraft:dynamic/run_command",
-        "template": "function hotpotato:app/game/init {dialog_explosion_time:$(dialog_explosion_time), dialog_cooldown_before_start:$(dialog_cooldown_before_start), dialog_player_display:$(dialog_player_display), dialog_cooldown:$(dialog_cooldown), dialog_speed_before_explosion:$(dialog_speed_before_explosion), dialog_player_particles:$(dialog_player_particles), dialog_player_display_color:$(dialog_player_display_color)}"
+        "template": "function hotpotato:app/game/init {dialog_explosion_time:$(dialog_explosion_time), dialog_cooldown_before_start:$(dialog_cooldown_before_start), dialog_player_display:$(dialog_player_display), dialog_cooldown:$(dialog_cooldown), dialog_speed_before_explosion:$(dialog_speed_before_explosion), dialog_player_particles:$(dialog_player_particles), dialog_saturation:$(dialog_saturation), dialog_no_immediate_retagging:$(dialog_no_immediate_retagging),dialog_player_display_color:$(dialog_player_display_color)}"
       }
     },
     {

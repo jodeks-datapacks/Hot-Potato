@@ -12,5 +12,6 @@ effect clear @a[nbt={active_effects:[{id:"minecraft:speed",duration:-1}]}] speed
 
 tag @a remove hotpotato.in_game
 tag @a remove hotpotato.has_potato
+tag @s remove hotpotato.had_potato
 
 scoreboard players reset &cooldown_before_start_counter hotpotato.root

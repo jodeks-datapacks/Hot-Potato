@@ -14,5 +14,4 @@ bossbar set hotpotato:explosion_time color yellow
 tag @a add hotpotato.in_game
 execute store result score &players_in_game hotpotato.root run list
 
-execute if score &player_display hotpotato.root matches 1 run effect give @a[tag=hotpotato.has_potato] minecraft:glowing 1 0 true
 execute if score &player_display hotpotato.root matches 1.. run team join hotpotato.players @a[tag=hotpotato.in_game]

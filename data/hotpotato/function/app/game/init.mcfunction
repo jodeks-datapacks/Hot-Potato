@@ -1,25 +1,27 @@
 execute if score &game_running hotpotato.root matches 1 run return run title @a actionbar [{"text":"Game is already running!"}]
 
-# Static values
 $data modify storage hotpotato:root explosion_time set value $(dialog_explosion_time)
-$data modify storage hotpotato:root cooldown set value $(dialog_cooldown)
 
 $scoreboard players set &explosion_time hotpotato.root $(dialog_explosion_time)
 $scoreboard players set &cooldown hotpotato.root $(dialog_cooldown)
 $scoreboard players set &cooldown_before_start hotpotato.root $(dialog_cooldown_before_start)
 $scoreboard players set &speed_before_explosion hotpotato.root $(dialog_speed_before_explosion)
 
-$scoreboard players set &player_display hotpotato.root $(dialog_player_display)
+execute if score &explosion_time hotpotato.root matches ..1 run scoreboard players set &explosion_time hotpotato.root 1
+execute if score &cooldown hotpotato.root matches ..0 run scoreboard players set &cooldown hotpotato.root 0
+execute if score &cooldown_before_start hotpotato.root matches ..0 run scoreboard players set &cooldown_before_start hotpotato.root 0
+execute if score &speed_before_explosion hotpotato.root matches ..0 run scoreboard players set &speed_before_explosion hotpotato.root 0
+
+scoreboard players operation &explosion_time_counter hotpotato.root = &explosion_time hotpotato.root
+scoreboard players operation &cooldown_counter hotpotato.root = &cooldown hotpotato.root
+scoreboard players operation &cooldown_before_start_counter hotpotato.root = &cooldown_before_start hotpotato.root
+
 $scoreboard players set &player_particles hotpotato.root $(dialog_player_particles)
+$scoreboard players set &player_saturation hotpotato.root $(dialog_saturation)
+$scoreboard players set &no_immediate_retagging hotpotato.root $(dialog_no_immediate_retagging)
+
+$scoreboard players set &player_display hotpotato.root $(dialog_player_display)
 $scoreboard players set &player_display_color hotpotato.root $(dialog_player_display_color)
-
-# Counters
-$data modify storage hotpotato:root explosion_time_counter set value $(dialog_explosion_time)
-$data modify storage hotpotato:root cooldown_counter set value $(dialog_cooldown)
-
-$scoreboard players set &explosion_time_counter hotpotato.root $(dialog_explosion_time)
-$scoreboard players set &cooldown_counter hotpotato.root $(dialog_cooldown)
-$scoreboard players set &cooldown_before_start_counter hotpotato.root $(dialog_cooldown_before_start)
 
 scoreboard players operation &speed_before_explosion_counter hotpotato.root = &explosion_time hotpotato.root
 scoreboard players operation &speed_before_explosion_counter hotpotato.root -= &speed_before_explosion hotpotato.root
