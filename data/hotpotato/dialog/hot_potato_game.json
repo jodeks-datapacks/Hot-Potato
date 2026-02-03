@@ -61,6 +61,12 @@
       "initial": true
     },
     {
+      "type": "minecraft:boolean",
+      "key": "dialog_locator_bar",
+      "label": "Remove potato player from locator bar",
+      "initial": true
+    },
+    {
       "type": "minecraft:single_option",
       "key": "dialog_player_display",
       "width": 250,
@@ -96,6 +102,13 @@
           "display": {
             "translate": "hotpotato.dialog.player_display.glowing",
             "fallback": "Glowing Effect for the potato guy"
+          }
+        },
+        {
+          "id": "4",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.glowing",
+            "fallback": "Glowing Effect for all players"
           }
         }
       ]
@@ -222,6 +235,46 @@
           }
         }
       ]
+    },
+        {
+      "type": "minecraft:single_option",
+      "key": "dialog_potato_model",
+      "width": 250,
+      "label": {
+        "translate": "hotpotato.dialog.potato_model",
+        "fallback": "Potato Model"
+      },
+      "options": [
+        {
+          "id": "0",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.none",
+            "fallback": "Vanilla"
+          },
+          "initial": true
+        },
+        {
+          "id": "1",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.team",
+            "fallback": "Rotten Block Potato"
+          }
+        },
+        {
+          "id": "2",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.glowing",
+            "fallback": "Easter Egg Potato"
+          }
+        },
+        {
+          "id": "3",
+          "display": {
+            "translate": "hotpotato.dialog.player_display.glowing",
+            "fallback": "Custom Potato (path: hotpotato:hotpotato)"
+          }
+        }
+      ]
     }
   ],
   "actions": [
@@ -229,7 +282,7 @@
       "label": "Start game",
       "action": {
         "type": "minecraft:dynamic/run_command",
-        "template": "function hotpotato:app/game/init {dialog_explosion_time:$(dialog_explosion_time), dialog_cooldown_before_start:$(dialog_cooldown_before_start), dialog_player_display:$(dialog_player_display), dialog_cooldown:$(dialog_cooldown), dialog_speed_before_explosion:$(dialog_speed_before_explosion), dialog_player_particles:$(dialog_player_particles), dialog_saturation:$(dialog_saturation), dialog_no_immediate_retagging:$(dialog_no_immediate_retagging),dialog_player_display_color:$(dialog_player_display_color)}"
+        "template": "function hotpotato:app/game/init {dialog_explosion_time:$(dialog_explosion_time), dialog_cooldown_before_start:$(dialog_cooldown_before_start), dialog_player_display:$(dialog_player_display), dialog_cooldown:$(dialog_cooldown), dialog_speed_before_explosion:$(dialog_speed_before_explosion), dialog_player_particles:$(dialog_player_particles), dialog_saturation:$(dialog_saturation), dialog_no_immediate_retagging:$(dialog_no_immediate_retagging),dialog_player_display_color:$(dialog_player_display_color), dialog_locator_bar:$(dialog_locator_bar), dialog_potato_model:$(dialog_potato_model)}"
       }
     },
     {

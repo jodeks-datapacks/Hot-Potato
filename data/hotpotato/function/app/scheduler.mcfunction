@@ -16,3 +16,4 @@ execute if score &speed_before_explosion_counter hotpotato.root matches 0 run ef
 
 execute if score &player_display hotpotato.root matches 2 run effect give @a[tag=hotpotato.in_game,tag=!hotpotato.has_potato] minecraft:glowing 1 0 true
 execute if score &player_display hotpotato.root matches 3 run effect give @a[tag=hotpotato.has_potato] minecraft:glowing 1 0 true
+execute if score &player_display hotpotato.root matches 3 run effect give @a[tag=hotpotato.in_game] minecraft:glowing 1 0 true

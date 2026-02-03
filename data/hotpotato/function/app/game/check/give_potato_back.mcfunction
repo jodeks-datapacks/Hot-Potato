@@ -1,3 +1,6 @@
 advancement revoke @s only hotpotato:not_potato_on_head
 
-item replace entity @s armor.head with minecraft:baked_potato[custom_data={hotpotato:true},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={hidden_components:["enchantments"]}]
+execute if score &potato_model hotpotato.root matches 0 run item replace entity @s armor.head with minecraft:baked_potato[custom_data={hotpotato:true},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={hidden_components:["enchantments"]}]
+execute if score &potato_model hotpotato.root matches 1 run item replace entity @s armor.head with minecraft:baked_potato[item_model="rottenblock:hot_potato",custom_data={hotpotato:true},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={hidden_components:["enchantments"]}]
+execute if score &potato_model hotpotato.root matches 2 run item replace entity @s armor.head with minecraft:baked_potato[item_model="rottenblock:potatohead",custom_data={hotpotato:true},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={hidden_components:["enchantments"]}]
+execute if score &potato_model hotpotato.root matches 3 run item replace entity @s armor.head with minecraft:baked_potato[item_model="hotpotato:hotpotato",custom_data={hotpotato:true},enchantments={binding_curse:1,vanishing_curse:1},tooltip_display={hidden_components:["enchantments"]}]

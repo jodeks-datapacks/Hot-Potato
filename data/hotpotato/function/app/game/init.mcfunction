@@ -19,9 +19,12 @@ scoreboard players operation &cooldown_before_start_counter hotpotato.root = &co
 $scoreboard players set &player_particles hotpotato.root $(dialog_player_particles)
 $scoreboard players set &player_saturation hotpotato.root $(dialog_saturation)
 $scoreboard players set &no_immediate_retagging hotpotato.root $(dialog_no_immediate_retagging)
+$scoreboard players set &locator_bar hotpotato.root $(dialog_locator_bar)
 
 $scoreboard players set &player_display hotpotato.root $(dialog_player_display)
 $scoreboard players set &player_display_color hotpotato.root $(dialog_player_display_color)
+
+$scoreboard players set &potato_model hotpotato.root $(dialog_potato_model)
 
 scoreboard players operation &speed_before_explosion_counter hotpotato.root = &explosion_time hotpotato.root
 scoreboard players operation &speed_before_explosion_counter hotpotato.root -= &speed_before_explosion hotpotato.root
